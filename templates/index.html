@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Predictor</title>
+</head>
+<body>
+    <h2>Enter Employee Details</h2>
+    <form method="POST" action="/predict">
+        Age: <input type="number" name="age" required><br>
+        Workclass: <input type="text" name="workclass" required><br>
+        Fnlwgt: <input type="number" name="fnlwgt" required><br>
+        Education: <input type="text" name="education" required><br>
+        Educational-num: <input type="number" name="educational-num" required><br>
+        Marital Status: <input type="text" name="marital-status" required><br>
+        Occupation: <input type="text" name="occupation" required><br>
+        Relationship: <input type="text" name="relationship" required><br>
+        Race: <input type="text" name="race" required><br>
+        Gender: <input type="text" name="gender" required><br>
+        Capital Gain: <input type="number" name="capital-gain" required><br>
+        Capital Loss: <input type="number" name="capital-loss" required><br>
+        Hours per Week: <input type="number" name="hours-per-week" required><br>
+        Native Country: <input type="text" name="native-country" required><br>
+        <input type="submit" value="Predict Salary">
+    </form>
+</body>
+</html>

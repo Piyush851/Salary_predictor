@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Prediction Result</title></head>
+<body>
+    <h2>Predicted Income: {{ prediction }}</h2>
+
+    <form method="POST" action="/save">
+        {% for key, value in user_input.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endfor %}
+        <input type="hidden" name="income" value="{{ prediction }}">
+        <p>Are you satisfied with this prediction?</p>
+        <button type="submit">Yes (Save My Data)</button>
+    </form>
+
+    <form method="GET" action="/">
+        <button type="submit">No (Try Again)</button>
+    </form>
+</body>
+</html>
