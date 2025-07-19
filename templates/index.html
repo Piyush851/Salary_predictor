@@ -4,22 +4,33 @@
     <title>Salary Predictor</title>
 </head>
 <body>
-    <h2>Enter Employee Details</h2>
+    <h2>Predict Your Salary</h2>
     <form method="POST" action="/predict">
-        Age: <input type="number" name="age" required><br>
-        Workclass: <input type="text" name="workclass" required><br>
-        Fnlwgt: <input type="number" name="fnlwgt" required><br>
-        Education: <input type="text" name="education" required><br>
-        Educational-num: <input type="number" name="educational-num" required><br>
-        Marital Status: <input type="text" name="marital-status" required><br>
-        Occupation: <input type="text" name="occupation" required><br>
-        Relationship: <input type="text" name="relationship" required><br>
-        Race: <input type="text" name="race" required><br>
-        Gender: <input type="text" name="gender" required><br>
-        Capital Gain: <input type="number" name="capital-gain" required><br>
-        Capital Loss: <input type="number" name="capital-loss" required><br>
-        Hours per Week: <input type="number" name="hours-per-week" required><br>
-        Native Country: <input type="text" name="native-country" required><br>
+        Age: <input type="number" name="age" required><br><br>
+
+        Gender:
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        Education Level:
+        <select name="education">
+            <option value="Bachelor's">Bachelor's</option>
+            <option value="Master's">Master's</option>
+            <option value="PhD">PhD</option>
+        </select><br><br>
+
+        Job Title:
+        <select name="job_title">
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Sales Associate">Sales Associate</option>
+            <option value="Director">Director</option>
+        </select><br><br>
+
+        Years of Experience: <input type="number" name="experience" required><br><br>
+
         <input type="submit" value="Predict Salary">
     </form>
 </body>
