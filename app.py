@@ -24,7 +24,6 @@ def predict():
         job_title = request.form['job_title']
         experience = float(request.form['experience'])
 
-        # Create dictionary with proper column names
         input_dict = {
             'Age': age,
             'Years of Experience': experience,
@@ -33,23 +32,17 @@ def predict():
             'Job Title': job_title
         }
 
-        # Convert to DataFrame
-        input_df = pd.DataFrame([input_dict])
+        input_df = pd.DataFrame([input_dict]) # Convert to DataFrame
 
-        # Apply one-hot encoding (same as training)
-        input_df = pd.get_dummies(input_df)
+        input_df = pd.get_dummies(input_df) # Apply one-hot encoding
 
-        # Reindex to match training columns
-        input_df = input_df.reindex(columns=model_columns, fill_value=0)
+        input_df = input_df.reindex(columns=model_columns, fill_value=0) # Reindex to match training columns
 
-        # Scale the input
-        input_df_scaled = scaler.transform(input_df)
+        input_df_scaled = scaler.transform(input_df) # Scale the input
 
-        # Predict the salary
-        predicted_salary = model.predict(input_df_scaled)[0]
+        predicted_salary = model.predict(input_df_scaled)[0] # Predict the salary
 
-        # Render result
-        return render_template('result.html', salary=round(predicted_salary, 2))
+        return render_template('result.html', salary=round(predicted_salary, 2)) # Render result
 
     except Exception as e:
         return f"Prediction error: {e}"
