@@ -13,7 +13,6 @@ model_columns = pd.read_csv('model_columns.csv', header=None).squeeze().tolist()
 job_titles_df = pd.read_csv('job_titles.csv')
 job_titles = job_titles_df['Job Title'].dropna().tolist()
 
-
 @app.route('/')
 def index():
     return render_template('index.html', job_titles=job_titles)
@@ -32,8 +31,6 @@ def predict():
             return "Invalid age. Must be between 18 and 70."
         if not (0 <= experience <= 50):
             return "Invalid experience. Must be between 0 and 50 years."
-        # if not re.match("^[a-zA-Z\s]{2,50}$", job_title):
-        #     return "Invalid job title format."
 
         input_dict = {
             'Age': age,
