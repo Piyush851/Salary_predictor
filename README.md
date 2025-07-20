@@ -45,5 +45,3 @@ This project was developed during my Artificial Intelligence internship at **Edu
 
 - **Edunet Foundation** for providing mentorship and opportunity
 - Open-source ML libraries and community tutorials
-
-Feel free to fork, contribute, or star the project! ⭐
